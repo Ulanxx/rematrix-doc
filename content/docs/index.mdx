@@ -3,99 +3,188 @@ title: 欢迎来到矩阵重构
 description: 探索 AI 的无限可能，重构认知的矩阵边界
 ---
 
-import { Cpu, Brain, Code2, Lightbulb } from 'lucide-react';
+import {
+  Brain,
+  Code2,
+  Lightbulb,
+  ArrowRight,
+  Sparkles,
+  Github,
+} from "lucide-react";
+import { NeonText } from "@/components/NeonText";
+import { GlowCard } from "@/components/GlowCard";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { Button } from "@/components/ui/moving-border";
+import { Spotlight } from "@/components/ui/spotlight";
 
-<div className="mb-8 p-6 rounded-lg border border-blue-500/30 bg-gradient-to-br from-blue-950/20 via-purple-950/10 to-transparent backdrop-blur-sm">
-  <div className="flex items-center gap-3 mb-4">
-    <Cpu className="w-8 h-8 text-blue-400" />
-    <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-sky-400 bg-clip-text text-transparent m-0">
-      矩阵重构 · REMATRIX
-    </h2>
-  </div>
-  <div className="text-slate-300 leading-relaxed">
-    欢迎进入矩阵重构的世界！这里分享最前沿的 AI 工程实践、开发范式和实战经验。
-    让我们一起探索 AI 技术的深层逻辑，重构对技术的认知。
+<div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden -mt-8 mb-16">
+  <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="cyan" />
+
+  <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
+    <div className="mb-8">
+      <NeonText color="cyan" size="lg" className="mb-6">
+        REMATRIX
+      </NeonText>
+      <div className="text-xl md:text-2xl text-slate-300 font-light">
+        <TextGenerateEffect
+          words="欢迎进入矩阵重构的世界 探索 AI 技术的深层逻辑 重构对技术的认知"
+          className="text-xl md:text-2xl"
+          duration={0.8}
+        />
+      </div>
+    </div>
+
+    <div className="flex flex-wrap gap-4 justify-center mt-12">
+      <Button
+        as="a"
+        href="/docs/ai-agent-survival-guide"
+        borderRadius="1rem"
+        className="text-base font-medium gap-2"
+      >
+        开始探索 <ArrowRight className="w-4 h-4" />
+      </Button>
+    </div>
   </div>
 </div>
 
-## 📚 精选文章
+## ✨ 精选文章
 
-### AI Agent 工程
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-12">
+  <GlowCard glowColor="cyan" className="group cursor-pointer">
+    <a href="/docs/ai-agent-survival-guide" className="block h-full">
+      <div className="flex flex-col h-full">
+        <div className="flex items-center gap-3 mb-4">
+          <Brain className="w-8 h-8 text-cyan-400 group-hover:scale-110 transition-transform" />
+          <h3 className="text-xl font-bold text-cyan-300 group-hover:text-cyan-200 transition-colors">
+            AI Agent 生存法则
+          </h3>
+        </div>
+        <p className="text-slate-400 text-sm leading-relaxed flex-1">
+          在 AI Agent 开发中的实战经验和生存指南，帮助你避开常见陷阱，构建稳定可靠的 Agent 系统。
+        </p>
+        <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+          阅读更多 <ArrowRight className="w-4 h-4 ml-1" />
+        </div>
+      </div>
+    </a>
+  </GlowCard>
 
-<div className="my-6 p-5 rounded-lg border border-slate-700 bg-slate-900/50 hover:border-blue-500/50 transition-all duration-300">
+<GlowCard glowColor="purple" className="group cursor-pointer">
+  <a href="/docs/openspec-paradigm" className="block h-full">
+    <div className="flex flex-col h-full">
+      <div className="flex items-center gap-3 mb-4">
+        <Code2 className="w-8 h-8 text-purple-400 group-hover:scale-110 transition-transform" />
+        <h3 className="text-xl font-bold text-purple-300 group-hover:text-purple-200 transition-colors">
+          OpenSpec 范式
+        </h3>
+      </div>
+      <p className="text-slate-400 text-sm leading-relaxed flex-1">
+        探索 AI 时代下的新型开发范式和方法论，了解如何用 OpenSpec
+        重新定义开发流程。
+      </p>
+      <div className="mt-4 flex items-center text-purple-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+        阅读更多 <ArrowRight className="w-4 h-4 ml-1" />
+      </div>
+    </div>
+  </a>
+</GlowCard>
+
+  <GlowCard glowColor="pink" className="group cursor-pointer">
+    <a href="/docs/prompt-engineering-pitfalls" className="block h-full">
+      <div className="flex flex-col h-full">
+        <div className="flex items-center gap-3 mb-4">
+          <Lightbulb className="w-8 h-8 text-pink-400 group-hover:scale-110 transition-transform" />
+          <h3 className="text-xl font-bold text-pink-300 group-hover:text-pink-200 transition-colors">
+            Prompt 工程陷阱
+          </h3>
+        </div>
+        <p className="text-slate-400 text-sm leading-relaxed flex-1">
+          深度剖析 Prompt 工程中的常见陷阱和解决方案，揭秘那些看似正确、实则致命的误区。
+        </p>
+        <div className="mt-4 flex items-center text-pink-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+          阅读更多 <ArrowRight className="w-4 h-4 ml-1" />
+        </div>
+      </div>
+    </a>
+  </GlowCard>
+</div>
+
+## 🎯 内容方向
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
+  <div className="p-6 rounded-lg border border-cyan-500/30 bg-linear-to-br from-cyan-950/20 to-transparent backdrop-blur-sm hover:border-cyan-500/60 transition-all">
+    <div className="flex items-start gap-4">
+      <div className="p-3 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
+        <Brain className="w-6 h-6 text-cyan-400" />
+      </div>
+      <div>
+        <h3 className="text-lg font-bold text-slate-100 mb-2">AI Agent 开发</h3>
+        <p className="text-slate-400 text-sm leading-relaxed">
+          从架构设计到工程实践的完整经验，包括 Agent 框架、工具调用、记忆管理等核心技术。
+        </p>
+      </div>
+    </div>
+  </div>
+
+{" "}
+<div className="p-6 rounded-lg border border-purple-500/30 bg-linear-to-br from-purple-950/20 to-transparent backdrop-blur-sm hover:border-purple-500/60 transition-all">
   <div className="flex items-start gap-4">
-    <Brain className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+    <div className="p-3 rounded-lg bg-purple-500/10 border border-purple-500/30">
+      <Code2 className="w-6 h-6 text-purple-400" />
+    </div>
     <div>
-      <h3 className="text-lg font-bold text-slate-100 mb-2">
-        <a href="/docs/ai-agent-survival-guide" className="hover:text-blue-400 transition-colors">
-          AI Agent 工程生存法则
-        </a>
-      </h3>
+      <h3 className="text-lg font-bold text-slate-100 mb-2">开发范式探索</h3>
       <p className="text-slate-400 text-sm leading-relaxed">
-        在 AI Agent 开发中的实战经验和生存指南，帮助你避开常见陷阱，构建稳定可靠的 Agent 系统。
+        AI 时代的新型开发方法和工具链，探索 OpenSpec、AI-Native 等前沿开发理念。
       </p>
     </div>
   </div>
 </div>
 
-### 开发范式
-
-<div className="my-6 p-5 rounded-lg border border-slate-700 bg-slate-900/50 hover:border-purple-500/50 transition-all duration-300">
+{" "}
+<div className="p-6 rounded-lg border border-pink-500/30 bg-linear-to-br from-pink-950/20 to-transparent backdrop-blur-sm hover:border-pink-500/60 transition-all">
   <div className="flex items-start gap-4">
-    <Code2 className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+    <div className="p-3 rounded-lg bg-pink-500/10 border border-pink-500/30">
+      <Lightbulb className="w-6 h-6 text-pink-400" />
+    </div>
     <div>
-      <h3 className="text-lg font-bold text-slate-100 mb-2">
-        <a href="/docs/openspec-paradigm" className="hover:text-purple-400 transition-colors">
-          OpenSpec：AI时代的开发范式
-        </a>
-      </h3>
+      <h3 className="text-lg font-bold text-slate-100 mb-2">Prompt 工程</h3>
       <p className="text-slate-400 text-sm leading-relaxed">
-        探索 AI 时代下的新型开发范式和方法论，了解如何用 OpenSpec 重新定义开发流程。
+        从理论到实战的 Prompt 优化技巧，深入分析常见误区和最佳实践。
       </p>
     </div>
   </div>
 </div>
 
-### Prompt 工程
-
-<div className="my-6 p-5 rounded-lg border border-slate-700 bg-slate-900/50 hover:border-sky-500/50 transition-all duration-300">
-  <div className="flex items-start gap-4">
-    <Lightbulb className="w-6 h-6 text-sky-400 mt-1 flex-shrink-0" />
-    <div>
-      <h3 className="text-lg font-bold text-slate-100 mb-2">
-        <a href="/docs/prompt-engineering-pitfalls" className="hover:text-sky-400 transition-colors">
-          为什么99%的Prompt一上线就跑偏？
-        </a>
-      </h3>
-      <p className="text-slate-400 text-sm leading-relaxed">
-        深度剖析 Prompt 工程中的常见陷阱和解决方案，揭秘那些看似正确、实则致命的误区。
-      </p>
+  <div className="p-6 rounded-lg border border-green-500/30 bg-linear-to-br from-green-950/20 to-transparent backdrop-blur-sm hover:border-green-500/60 transition-all">
+    <div className="flex items-start gap-4">
+      <div className="p-3 rounded-lg bg-green-500/10 border border-green-500/30">
+        <Sparkles className="w-6 h-6 text-green-400" />
+      </div>
+      <div>
+        <h3 className="text-lg font-bold text-slate-100 mb-2">实战案例</h3>
+        <p className="text-slate-400 text-sm leading-relaxed">
+          真实项目中的问题与解决方案，分享可落地的工程经验和最佳实践。
+        </p>
+      </div>
     </div>
   </div>
 </div>
 
-## 🎯 关于本站
-
-这里是一个专注于 AI 工程实践的知识分享平台，内容包括：
-
-- **🤖 AI Agent 开发** - 从架构设计到工程实践的完整经验
-- **🔧 开发范式探索** - AI 时代的新型开发方法和工具链
-- **💡 Prompt 工程** - 从理论到实战的 Prompt 优化技巧
-- **📊 实战案例** - 真实项目中的问题与解决方案
-
-## 💬 开始阅读
-
-点击上方文章卡片，开始你的 AI 工程探索之旅。每篇文章都基于实战经验，力求为你提供可落地的方法和思路。
-
-<div className="mt-12 p-4 rounded-lg border border-blue-500/30 bg-blue-950/10">
-  <p className="text-blue-400 font-mono text-sm mb-0">
-    💡 提示：文章会持续更新，建议收藏本站以获取最新内容
-  </p>
+<div className="mt-16 p-6 rounded-lg border border-cyan-500/30 bg-linear-to-br from-cyan-950/10 via-blue-950/10 to-transparent backdrop-blur-sm">
+  <div className="flex items-start gap-4">
+    <div className="text-3xl">💡</div>
+    <div>
+      <p className="text-cyan-300 font-semibold mb-2">持续更新中</p>
+      <p className="text-slate-400 text-sm leading-relaxed">
+        所有文章均基于实战经验撰写，力求为你提供可落地的方法和思路。建议收藏本站以获取最新内容。
+      </p>
+    </div>
+  </div>
 </div>
 
 ---
 
-<div className="text-center text-slate-500 text-sm mt-12">
-  <p>持续分享中 · 敬请期待更多精彩内容</p>
-  <p className="mt-2">重构认知 · 探索未来</p>
+<div className="text-center text-slate-500 text-sm mt-16">
+  <p className="font-mono">REMATRIX · 重构认知 · 探索未来</p>
 </div>
