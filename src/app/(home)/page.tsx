@@ -124,23 +124,23 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-transparent border border-blue-500/20">
               <div className="text-4xl md:text-5xl font-bold gradient-text-blue mb-2">
-                100+
+                3+
               </div>
               <div className="text-slate-400">精选文章</div>
             </div>
             
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20">
               <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">
-                50+
+                3+
               </div>
               <div className="text-slate-400">技术主题</div>
             </div>
             
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-sky-500/10 to-transparent border border-sky-500/20">
               <div className="text-4xl md:text-5xl font-bold gradient-text-blue mb-2">
-                24/7
+                持续
               </div>
-              <div className="text-slate-400">持续更新</div>
+              <div className="text-slate-400">更新中</div>
             </div>
           </div>
         </div>
