@@ -3,7 +3,7 @@ title: AI 系统工程的生死线：边界、权限与伪智能
 description: 深入探讨 AI Agent 系统架构中的边界设计、权限控制和工程红线。揭示为什么绝大多数 AI Agent 项目失败的根本原因，以及如何构建工程合格的 AI 系统。
 ---
 
-![AI ](/images/ai_engineering_red_lines_boundaries_and_permissions.png)
+![AI 三明治架构图](/images/ai_engineering_red_lines_boundaries_and_permissions.png)
 
 **先给结论：**
 

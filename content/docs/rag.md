@@ -3,6 +3,8 @@ title: 深度拆解 RAG：为什么你的知识库变成了"垃圾检索系统"�
 description: 深入剖析 RAG（检索增强生成）系统的工程陷阱。从向量检索的局限性、混合检索的必要性到重排序的关键作用，揭示如何构建真正工业级的 RAG 系统，避免"Demo 惊艳，上线一塌糊涂"的困境。
 ---
 
+![RAG](/images/rag.png)
+
 **先给结论：**
 
 RAG（Retrieval-Augmented Generation）的本质，不是 AI 问题，而是 **搜索引擎（Search Engine）** 问题。
