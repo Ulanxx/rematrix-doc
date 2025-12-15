@@ -1,5 +1,6 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 import { Logo } from '@/components/Logo';
+import { NavbarActions } from '@/components/NavbarActions';
 
 export function baseOptions(): BaseLayoutProps {
   return {
@@ -20,11 +21,9 @@ export function baseOptions(): BaseLayoutProps {
         url: '/docs',
         active: 'nested-url',
       },
-      {
-        text: 'GitHub',
-        url: 'https://github.com/Ulanxx/rematrix',
-        external: true,
-      },
     ],
+    themeSwitch: {
+      component: <NavbarActions />,
+    },
   };
 }
